@@ -1,5 +1,237 @@
-.mycontainer{
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+  }
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar{
+    
+    width:100%;
     display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+.logo-text{
+    cursor: pointer;
+    font-size: larger;
+    margin: 30px 0;
+    padding: 1%;
+}
+
+.menu-logo{
+    width: 50px;
+    cursor: pointer;
+    display: none;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+ nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+ }
+ nav ul li a:hover{
+    color: #ff5ea2;
+    font-size: 24px;
+ }
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 120px 0;
+}
+
+.col-1{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+
+.col-1:hover{
+    font-size: larger;
+}
+
+.col-1::after{
+    content: '';
+    width: 8px;
+    height: 73%;
+    background: linear-gradient(#2b2e2a, #fd4e51);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+
+.col-2{
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+}
+.col-2 .frontimg{
+    width: 80%;
+}
+/* .color-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(#2b2e2a, #fd4e51);
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    width: 80%;
+    z-index: -1;
+    transform: translateX(150px);
+} */
+
+.social-media img{
+    height: 55px;
+    margin: 20px;
+    cursor: pointer;
+}
+.social-media{
+    text-align: center;
+}
+
+.row2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.info{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    flex-direction: column;
+}
+.cards{
+    display: block;
+    width: calc(316px - 64px);
+    height: calc(220px - 64px);
+    background: linear-gradient(#ff6b7f, #fd4e51);
+    box-shadow: 0 2px 4px 0 #1b1b1c;
+    border-radius: 4px;
+    margin: 0 20px 16px 0;
+    padding: 32px;
+    cursor: pointer;
+}
+
+.about{
+    display: block;
+    width: 100%;
+    height: calc(220px - 64px);
+    box-shadow: 0 2px 4px 0 #1b1b1c;
+    border-radius: 4px;
+    margin: 0 20px 16px 0;
+    padding: 32px;
+    cursor: pointer;
+}
+
+.links{
+    display: block;
+    width: 100%;
+    height: calc(220px - 64px);
+    background-color: #989090;
+    box-shadow: 0 2px 4px 0 #1b1b1c;
+    border-radius: 4px;
+    margin: 0 20px 16px 0;
+    padding: 32px;
+    cursor: pointer;
+}
+
+.cards h1{
+    font-size: 20px;
+}
+
+.col-1 a{
+    text-decoration: none;
+    text-shadow: #fd4e51;
+    color: #000;
+    font-size: larger;
+    background-color: #fd4e51;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width:700px){
+    nav ul{
+        width: 100%;
+        background: linear-gradient(#2b2e2a, #fd4e51);
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 1;
+    }
+
+    nav ul li{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        color: #fff;
+    }
+
+    .menu-logo{
+        display: block;
+    }
+    #menuList{
+        overflow: hidden;
+        transition: 0.4s;
+    }
+
+    .row{
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+    .col-2{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+    .col-2 .frontimg{
+        width: 77%;
+    }
+    .col-1{
+        flex-basis: 100%;
+    }
+    .col-1 h2{
+        font-size: 30px;
+    }
+    .col-1 h3{
+        font-size: 20px;
+    }
+    .about{
+        width: 77%;
+    }
+    .links{
+        width: 77%;
+    }
 }
